@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="feY-L3-SXt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="76E-FV-rGl">
+            <objects>
+                <viewController id="feY-L3-SXt" customClass="ViewController" customModule="Parallel_Download" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lBG-Dt-RGi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d8X-tp-jB2">
+                                <rect key="frame" x="109.5" y="321.5" width="156" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="JJK-qB-GV1"/>
+                                    <constraint firstAttribute="height" constant="24" id="LkD-fK-IbZ"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPS-Ss-Otb">
+                                <rect key="frame" x="170.5" y="347" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="feY-L3-SXt" eventType="touchUpInside" id="McM-ui-nie"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDX-pB-7Y9">
+                                <rect key="frame" x="101.5" y="284.5" width="172" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="de1-VO-szj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d8X-tp-jB2" firstAttribute="centerY" secondItem="lBG-Dt-RGi" secondAttribute="centerY" id="UxJ-ko-q6j"/>
+                            <constraint firstItem="vPS-Ss-Otb" firstAttribute="centerX" secondItem="d8X-tp-jB2" secondAttribute="centerX" id="bgA-bj-dYM"/>
+                            <constraint firstItem="rDX-pB-7Y9" firstAttribute="centerX" secondItem="d8X-tp-jB2" secondAttribute="centerX" id="bjG-30-sll"/>
+                            <constraint firstItem="d8X-tp-jB2" firstAttribute="centerX" secondItem="lBG-Dt-RGi" secondAttribute="centerX" id="dE2-MZ-Gpy"/>
+                            <constraint firstItem="d8X-tp-jB2" firstAttribute="top" secondItem="rDX-pB-7Y9" secondAttribute="bottom" constant="16" id="qM7-Ku-ajG"/>
+                            <constraint firstItem="vPS-Ss-Otb" firstAttribute="firstBaseline" secondItem="d8X-tp-jB2" secondAttribute="baseline" constant="22" symbolType="layoutAnchor" id="sGX-fn-sUd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FVQ-Cy-CiT"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="d8X-tp-jB2" id="OgV-Xf-uAa"/>
+                        <outlet property="successfulLabel" destination="rDX-pB-7Y9" id="7of-i6-07K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8Y-Np-NPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="170"/>
+        </scene>
+    </scenes>
+</document>
